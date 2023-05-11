@@ -1,0 +1,47 @@
+@import url('../../assets/globalStyles.scss');
+
+
+.search {
+    color: var(--text-color);
+    overflow-y: scroll;
+    max-height: 30rem;
+
+    .search-form {
+        display: grid;
+        grid-template-columns: 1.5rem auto;
+        border-radius: 1rem;
+        overflow: hidden;
+        color: var(--text-color);
+        font-size: var(--normal-font);
+        background: var(--input-color);
+        margin: 1rem auto;
+        width: 90%;
+
+        input {
+            padding: .4rem;
+            background: transparent;
+            outline: none;
+            border: none;
+            color: var(--text-color);
+        }
+    }
+
+    .search-result {
+
+
+        .user {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: .4rem;
+            transition: .5s;
+            
+            &:hover {
+                cursor: pointer;
+                background: var(--input-color);
+            }
+        }
+    }
+
+
+}

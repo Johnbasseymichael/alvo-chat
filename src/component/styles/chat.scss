@@ -1,0 +1,44 @@
+@import url('../../assets/globalStyles.scss');
+
+.chat {
+    color: var(--text-color);
+    background: var(--input-color);
+    position: relative;
+
+.input {
+    position: absolute;
+    bottom: 0;
+    width:100%;
+}
+
+    .current-chat-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1.7rem;
+        height: 3.79rem;
+        border-bottom: .13rem solid var(--dark-input-color);
+
+        .chat-icons {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            gap: .5rem;
+
+            span {
+                padding: .3rem;
+                border-radius: .3rem;
+                background: transparent;
+                transition: .5s;
+
+                &:hover {
+                    background: var(--dark-input-color);
+                }
+            }
+        }
+
+    }
+
+
+}

@@ -1,0 +1,19 @@
+@import url('../../assets/globalStyles.scss');
+
+
+.messages {
+    // ===========WORK ON THE HEIGHT LETTER
+    overflow-y: auto;
+    height: 28rem;
+}
+.profile-photo {
+    border-radius: 50%;
+    width: 2.4rem;
+    height: 2.4rem;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+    }
+
+}

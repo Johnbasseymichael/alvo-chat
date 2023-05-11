@@ -1,0 +1,36 @@
+@import url('../../assets/globalStyles.scss');
+
+.side-bar {
+    background: var(--dark-input-color);
+    color: var(--text-color);
+    position: relative;
+
+
+    .profile-photo {
+        border-radius: 50%;
+        width: 2.4rem;
+        height: 2.4rem;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .logout-btn {
+        position: absolute;
+        bottom: .8rem;
+        left: .8rem;
+        border: none;
+        background: var(--input-color);
+        padding: .6rem 1rem;
+        border-radius: .4rem;
+        color: var(--text-color);
+        transition: .5s;
+
+        &:hover {
+            background: rgb(117, 5, 5);
+        }
+
+    }
+}

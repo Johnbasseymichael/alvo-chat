@@ -1,0 +1,37 @@
+@import url('../../assets/globalStyles.scss');
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: .17rem solid var(--input-color);
+    height: 3.7rem;
+
+    .logo {
+        font-size: 1.1rem;
+        padding: .5rem;
+        color: var(--input-color);
+    }
+
+    .user {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: .4rem;
+        color: var(--text-color);
+        cursor: pointer;
+
+        button {
+            background: transparent;
+            padding: .3rem .5rem;
+            border-radius: .3rem;
+            color: var(--text-color);
+            transition: .5s;
+            border: none;
+
+            &:hover {
+                background: var(--bg-color);
+            }
+        }
+    }
+}

@@ -1,0 +1,45 @@
+@import url('../../assets/globalStyles.scss');
+
+
+
+.chats {
+    // WORK ON THE HEIGHT LETTER
+    overflow-y: auto;
+    height: 16rem;
+
+    .chated {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+        background: transparent;
+        cursor: pointer;
+        transition: .5s;
+
+        &:hover {
+            background: var(--input-color);
+        }
+
+        .last-msg {
+            font-size: var(--small-font);
+        }
+
+        .time {
+            font-size: var(--small-font);
+        }
+
+        .chat-content {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            .chat-info {
+                display: flex;
+                flex-direction: column;
+                gap: .2rem;
+            }
+
+        }
+    }
+
+}

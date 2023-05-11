@@ -1,0 +1,43 @@
+@import url('../../assets/globalStyles.scss');
+
+.input {
+    // background-color: var(--dark-input-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    border-top: .2rem solid var(--dark-input-color);
+    height: 4rem;
+
+    input {
+        background: transparent;
+        border: none;
+        width: 100%;
+        outline: none;
+        color: var(--text-color);
+        font-size: var(--normal-font);
+        padding: .5rem;
+
+    }
+
+    .input-action-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .7rem;
+        margin-right: 1rem;
+
+        button {
+            background: transparent;
+            border: none;
+            transition: .5s;
+            padding: .8rem;
+            border-radius: .4rem;
+
+            &:hover {
+                background: var(--dark-input-color);
+            }
+        }
+    }
+
+}

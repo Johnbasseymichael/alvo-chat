@@ -1,0 +1,37 @@
+@import url('../../assets/globalStyles.scss');
+
+
+
+.active-users {
+    border-bottom: .2rem solid var(--input-color);    border-top: .2rem solid var(--input-color);
+
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: .5rem;
+
+
+    .wrapper {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+
+        .active-user {
+            position: relative;
+
+           
+
+            span {
+                display: block;
+                background: rgb(16, 240, 16);
+                height: 0.5rem;
+                width: 0.5rem;
+                border-radius: 50%;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+        }
+
+    }
+
+}

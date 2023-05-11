@@ -1,0 +1,54 @@
+@import url('../../assets/globalStyles.scss');
+
+
+.message {
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+    margin: 1rem;
+
+
+    .msg-info {
+        .time {
+            font-size: var(--small-font);
+            color: gray;
+        }
+    }
+
+    .msg-content {
+        display: flex;
+        flex-direction: column;
+        gap: .7rem;
+        max-width: 75%;
+
+        .msg {
+            background: var(--text-color);
+            color: var(--bg-color);
+            padding: .4rem .7rem;
+            border-radius: 0 .8rem .8rem .8rem;
+            max-width: max-content;
+        }
+
+        img {
+            max-width: 50%;
+            border-radius: .6rem;
+        }
+    }
+
+    &.owner {
+        flex-direction: row-reverse;
+
+        .msg-content {
+            align-items: flex-end;
+
+            .msg {
+                background: var(--dark-input-color);
+                color: var(--text-color);
+                padding: .4rem .7rem;
+                border-radius: .8rem 0 .8rem .8rem;
+            }
+        }
+    }
+
+     
+}
