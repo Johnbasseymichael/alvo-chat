@@ -7,7 +7,7 @@ import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth'
 import { doc, setDoc } from "firebase/firestore";
 
-import {useNavigate} from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 
 
 
@@ -98,10 +98,10 @@ const Register = () => {
                     <input type="password" placeholder='Create your password' />
                     <input onChange={(e) => setSelectedPic(e.target.files[0])} style={{ display: "none" }} type="file" id='profile-pic' />
                     <label htmlFor="profile-pic">{selectedPic ? `${selectedPic.name}` : 'add pic'}</label>
-                    <button>Sign In</button>
+                    <button>Sign up</button>
                 </form>
 
-                <p>You do have an account? Login</p>
+                <p>You do have an account? <Link to="/login">Login</Link></p>
             </div>
         </div>
     )

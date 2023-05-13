@@ -5,7 +5,12 @@ import Search from './Search'
 import Chats from './Chats'
 import ActiveUsers from './ActiveUsers'
 
+import {auth} from '../firebase'
+import { signOut } from 'firebase/auth'
 
+const handleSignOut = ()=> {
+  signOut(auth)
+}
 
 const SideBar = () => {
 
@@ -15,7 +20,7 @@ const SideBar = () => {
       <Search />
       <ActiveUsers/>
       <Chats />
-      <button className='logout-btn'>Log out</button>
+      <button onClick={handleSignOut} className='logout-btn'>Log out</button>
     </div>
   )
 }

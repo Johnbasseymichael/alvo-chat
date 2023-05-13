@@ -1,21 +1,24 @@
-import React from 'react'
-import {Logo} from './Logo'
+import React, { useContext } from 'react'
+import { Logo } from './Logo'
 import './styles/nav-bar.scss'
-import me from '../../img/me.jpg'
+import { AuthContext } from '../context/AuthContext'
 
 
 
 
 const NavBar = () => {
+  const { currentUser } = useContext(AuthContext)
+
+
   return (
     <div className='nav-bar'>
       <Logo />
 
       <div className="user">
         <div className="profile-photo">
-        <img src={me} alt="me" />
+          <img src={currentUser.photoURL} alt="me" />
         </div>
-        <span>alvoskiny</span>
+        <span>{currentUser.displayName}</span>
         <button>...</button>
       </div>
     </div>
