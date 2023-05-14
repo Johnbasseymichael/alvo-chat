@@ -3,8 +3,9 @@
 
 .search {
     color: var(--text-color);
-    overflow-y: scroll;
+    overflow-y: auto;
     max-height: 30rem;
+    
 
     .search-form {
         display: grid;

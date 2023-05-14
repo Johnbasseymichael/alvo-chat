@@ -5,11 +5,11 @@
     background: var(--input-color);
     position: relative;
 
-.input {
-    position: absolute;
-    bottom: 0;
-    width:100%;
-}
+    .input {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
 
     .current-chat-info {
         display: flex;

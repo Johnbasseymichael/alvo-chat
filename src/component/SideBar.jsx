@@ -15,7 +15,7 @@ const handleSignOut = ()=> {
 const SideBar = () => {
 
   return (
-    <div className='side-bar'>
+    <div className='side-bar '>
       <NavBar />
       <Search />
       <ActiveUsers/>

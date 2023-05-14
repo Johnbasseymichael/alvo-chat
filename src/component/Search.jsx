@@ -1,7 +1,13 @@
 import React, { useContext, useState } from 'react'
 import './styles/search.scss'
 
-import { query, where, collection, getDocs, getDoc, setDoc, doc, updateDoc, serverTimestamp } from 'firebase/firestore'
+import {
+  query, where,
+  collection,
+  getDocs, getDoc,
+  setDoc, doc, updateDoc,
+  serverTimestamp
+} from 'firebase/firestore'
 import { db } from '../firebase'
 
 import { AuthContext } from '../context/AuthContext'
@@ -68,6 +74,14 @@ const Search = () => {
     setUser(null)
     setUserName('')
   }
+
+
+
+
+
+
+
+  
 
   return (
 

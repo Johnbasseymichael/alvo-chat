@@ -3,20 +3,37 @@
 
 .home {
     background: var(--bg-color);
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
     .home-wrapper {
         overflow: hidden;
-        width: 80%;
-        height: 88%;
-        border-radius: .5rem;
-        display: grid;
+        height: 100vh;
         grid-template-columns: 33% auto;
+        display: grid;
     }
 
+    .mobile-display {
+        display: none;
+    }
+}
 
+@media (max-width:720px) {
+
+    .home {
+        .home-wrapper {
+
+            display: none;
+
+
+        }
+
+        .mobile-display {
+            display: block;
+            height: 100vh;
+            .side-bar {
+                height: 100%;
+            }
+
+
+        }
+    }
 }

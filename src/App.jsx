@@ -6,6 +6,7 @@ import Register from './pages/Register'
 import { useContext } from 'react'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { AuthContext } from './context/AuthContext'
+import SideBar from './component/SideBar'
 
 
 function App() {
@@ -20,15 +21,18 @@ function App() {
   }
 
   return (
-    <BrowserRouter >
-      <Routes>
-        <Route path='/'>
-          <Route index element={<ProtectedRoute> <Home /> </ProtectedRoute>} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/register' element={<Register />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <>
+      <BrowserRouter >
+        <Routes>
+          <Route path='/'>
+            <Route index element={<ProtectedRoute> <Home /> </ProtectedRoute>} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/register' element={<Register />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+     
+    </>
   )
 }
 

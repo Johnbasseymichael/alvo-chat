@@ -30,8 +30,10 @@
         }
 
         img {
-            max-width: 50%;
-            border-radius: .6rem;
+            max-width: 7rem;
+            // aspect-ratio: .99/1.5;
+            object-fit: cover;
+            border-radius: 1rem;
         }
     }
 

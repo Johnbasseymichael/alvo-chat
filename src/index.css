@@ -1,4 +1,4 @@
-
+@import url('./assets/globalStyles.scss');
 
 
 body {
@@ -6,4 +6,27 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: .6em;
+    height: 0.6em;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background-color: var(--text-color);
+    margin-block: .3rem;
+}
+
+::-webkit-scrollbar-thumb {
+    margin: 1em;
+    background: var(--dark-input-color);
+    border-radius: 100vw;
+    border: .15rem solid var(--text-color);
+}
+
+::-webkit-scrollbar-thumb:active {
+    
+    background: var(--input-color);
 }

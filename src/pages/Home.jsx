@@ -10,6 +10,10 @@ const Home = () => {
                 <SideBar />
                 <Chat />
             </div>
+
+            <div className="mobile-display">
+                <SideBar />
+            </div>
         </div>
     )
 }

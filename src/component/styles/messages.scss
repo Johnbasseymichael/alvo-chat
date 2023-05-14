@@ -4,8 +4,9 @@
 .messages {
     // ===========WORK ON THE HEIGHT LETTER
     overflow-y: auto;
-    height: 28rem;
+    max-height: 32rem;
 }
+
 .profile-photo {
     border-radius: 50%;
     width: 2.4rem;
