@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Logo } from '../component/Logo'
 import './styles/register.scss'
+import { BsFillImageFill } from "react-icons/bs";
+
 
 import { auth, storage, db } from '../firebase'
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
@@ -97,7 +99,7 @@ const Register = () => {
                     <input type="text" placeholder='Enter your email' />
                     <input type="password" placeholder='Create your password' />
                     <input onChange={(e) => setSelectedPic(e.target.files[0])} style={{ display: "none" }} type="file" id='profile-pic' />
-                    <label htmlFor="profile-pic">{selectedPic ? `${selectedPic.name}` : 'add pic'}</label>
+                    <label htmlFor="profile-pic">{selectedPic ? `${selectedPic.name}` : <AddPic/> }</label>
                     <button>Sign up</button>
                 </form>
 
@@ -108,4 +110,14 @@ const Register = () => {
 }
 
 export default Register;
+
+
+const AddPic = () => {
+  return (
+    <div style={{display:'flex',gap:'1rem', fontSize:'1.5rem'}}>
+      <BsFillImageFill/>
+      <span style={{fontSize:'1rem'}}>Add a photo</span>
+    </div>
+  )
+}
 

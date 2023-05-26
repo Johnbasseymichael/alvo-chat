@@ -4,11 +4,13 @@ import NavBar from './NavBar'
 import Search from './Search'
 import Chats from './Chats'
 import ActiveUsers from './ActiveUsers'
+import { HiLogin } from "react-icons/hi";
 
-import {auth} from '../firebase'
+
+import { auth } from '../firebase'
 import { signOut } from 'firebase/auth'
 
-const handleSignOut = ()=> {
+const handleSignOut = () => {
   signOut(auth)
 }
 
@@ -18,9 +20,12 @@ const SideBar = () => {
     <div className='side-bar '>
       <NavBar />
       <Search />
-      <ActiveUsers/>
+      <ActiveUsers />
       <Chats />
-      <button onClick={handleSignOut} className='logout-btn'>Log out</button>
+      <button onClick={handleSignOut} className='logout-btn'>
+        <span><HiLogin  /></span>
+        Log out
+      </button>
     </div>
   )
 }

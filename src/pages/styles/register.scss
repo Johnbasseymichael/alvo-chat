@@ -1,5 +1,8 @@
 @import url('../../assets/globalStyles.scss');
-
+.add-pic {
+    display: none;
+    color: red;
+}
 .register-container {
     display: flex;
     align-items: center;

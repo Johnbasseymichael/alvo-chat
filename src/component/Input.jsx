@@ -6,6 +6,7 @@ import { ChatsContext } from '../context/ChatsContext'
 import { arrayUnion, doc, serverTimestamp, Timestamp, updateDoc } from 'firebase/firestore'
 import { db, storage } from '../firebase'
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
+import { BsFillImageFill,BsFillSendFill } from "react-icons/bs";
 
 import { v4 as uuid } from 'uuid'
 
@@ -86,9 +87,8 @@ const Input = () => {
         onChange={e => setImg(e.target.files[0])} />
 
       <div className="input-action-btn">
-        <button>sen</button>
-        <button>sen</button>
-        <button onClick={handleSend}>send</button>
+        <button><BsFillImageFill/></button>
+        <button onClick={handleSend}><BsFillSendFill/></button>
       </div>
     </div>
   )

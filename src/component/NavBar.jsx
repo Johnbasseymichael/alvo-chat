@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { Logo } from './Logo'
 import './styles/nav-bar.scss'
 import { AuthContext } from '../context/AuthContext'
+import { HiOutlineDotsHorizontal } from "react-icons/hi";
 
 
 
@@ -19,7 +20,7 @@ const NavBar = () => {
           <img src={currentUser.photoURL} alt="me" />
         </div>
         <span>{currentUser.displayName}</span>
-        <button>...</button>
+        <button><HiOutlineDotsHorizontal/></button>
       </div>
     </div>
   )

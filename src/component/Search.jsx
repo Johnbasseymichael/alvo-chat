@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import './styles/search.scss'
-
+import { HiOutlineSearch } from "react-icons/hi";
 import {
   query, where,
   collection,
@@ -75,15 +75,14 @@ const Search = () => {
     setUserName('')
   }
 
-
-
+  
 
 
   return (
 
     <div className="search">
       <div className="search-form">
-        <span className='search-icon'>...</span>
+        <span className='search-icon'><HiOutlineSearch /></span>
         <input type="text" placeholder='Find a user' onKeyDown={handleKey} onChange={e => setUserName(e.target.value)} value={userName} />
       </div>
 

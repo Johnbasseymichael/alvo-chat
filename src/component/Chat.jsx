@@ -3,6 +3,9 @@ import "./styles/chat.scss"
 import Messages from './Messages'
 import Input from './Input'
 import { ChatsContext } from '../context/ChatsContext'
+import { MdVideoChat } from "react-icons/md";
+import { BsFillMicFill } from "react-icons/bs";
+import { BiMenuAltRight } from "react-icons/bi";
 
 
 const Chat = () => {
@@ -16,9 +19,9 @@ const Chat = () => {
         <span>{data?.user?.displayName}</span>
 
         <div className="chat-icons">
-          <span>...</span>
-          <span>...</span>
-          <span>...</span>
+          <span><MdVideoChat/></span>
+          <span><BsFillMicFill/></span>
+          <span><BiMenuAltRight/></span>
         </div>
       </div>
 

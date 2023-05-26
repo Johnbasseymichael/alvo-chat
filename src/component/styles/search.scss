@@ -6,7 +6,10 @@
     overflow-y: auto;
     max-height: 30rem;
     
-
+.search-icon {
+    font-size: 1.3rem;
+    padding-top: .3rem;
+}
     .search-form {
         display: grid;
         grid-template-columns: 1.5rem auto;
