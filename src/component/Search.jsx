@@ -48,8 +48,8 @@ const Search = () => {
       if (!res.exists()) {
         await setDoc(doc(db, "chats", combinedId), { messages: [] });
 
-        await updateDoc(doc(db, 'userchats', currentUser.uid), {
-          [combinedId + ".userinfo"]: {
+        await updateDoc(doc(db, 'userChats', currentUser.uid), {
+          [combinedId + ".userInfo"]: {
             uid: user.uid,
             displayName: user.displayName,
             photoURL: user.photoURL
@@ -57,8 +57,8 @@ const Search = () => {
           [combinedId + ".date"]: serverTimestamp()
         });
 
-        await updateDoc(doc(db, 'userchats', user.uid), {
-          [combinedId + ".userinfo"]: {
+        await updateDoc(doc(db, 'userChats', user.uid), {
+          [combinedId + ".userInfo"]: {
             uid: currentUser.uid,
             displayName: currentUser.displayName,
             photoURL: currentUser.photoURL
@@ -78,10 +78,6 @@ const Search = () => {
 
 
 
-
-
-
-  
 
   return (
 

@@ -1,40 +1,33 @@
-import React from 'react'
+import React, { useContext, useEffect, useRef } from 'react'
 import './styles/message.scss'
-import me from '../../img/me.jpg'
+import { AuthContext } from '../context/AuthContext'
+import { ChatsContext } from '../context/ChatsContext'
 
-const message = () => {
+const message = ({ message }) => {
+  const { currentUser } = useContext(AuthContext)
+  const { data } = useContext(ChatsContext)
+
+  const ref = useRef()
+  useEffect(() => {
+    ref.current?.scrollIntoView({ behavior: 'smooth' })
+  }, [message])
+
+
   return (
-    <>
-      <div className='message '>
-        <div className="msg-info">
-          <div className="profile-photo">
-            <img src={me} />
-          </div>
-          <span className="time">just now</span>
-        </div>
 
-        <div className="msg-content">
-          <span className="msg">this is a test</span>
-          <img src={me} />
+    <div ref={ref} className={`message ${message.senderId === currentUser.uid && 'owner'} `}>
+      <div className="msg-info">
+        <div className="profile-photo">
+          <img src={message.senderId === currentUser.uid ? currentUser.photoURL : data.user?.photoURL} />
         </div>
+        <span className="time">just now</span>
       </div>
 
-
-      {/* DELETE THIS DIV LETTER */}
-      <div className='message owner'>
-        <div className="msg-info">
-          <div className="profile-photo">
-            <img src={me} />
-          </div>
-          <span className="time">just now</span>
-        </div>
-
-        <div className="msg-content">
-          <span className="msg">this is a test for the sender</span>
-          {/* <img src={me} /> */}
-        </div>
+      <div className="msg-content">
+        <span className="msg">{message.text}</span>
+        {message.img && <img src={message.img} />}
       </div>
-    </>
+    </div>
 
   )
 }

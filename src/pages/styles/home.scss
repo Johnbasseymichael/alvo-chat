@@ -2,7 +2,7 @@
 
 
 .home {
-    background: var(--bg-color);
+    background: var(--input-color);
 
     .home-wrapper {
         overflow: hidden;
@@ -18,22 +18,22 @@
 
 @media (max-width:720px) {
 
-    .home {
-        .home-wrapper {
+    // .home {
+    //     .home-wrapper {
 
-            display: none;
-
-
-        }
-
-        .mobile-display {
-            display: block;
-            height: 100vh;
-            .side-bar {
-                height: 100%;
-            }
+    //         display: none;
 
 
-        }
-    }
+    //     }
+
+    //     .mobile-display {
+    //         display: block;
+    //         height: 100vh;
+    //         .side-bar {
+    //             height: 100%;
+    //         }
+
+
+    //     }
+    // }
 }
