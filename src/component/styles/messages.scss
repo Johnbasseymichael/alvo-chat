@@ -2,9 +2,8 @@
 
 
 .messages {
-    // ===========WORK ON THE HEIGHT LETTER
     overflow-y: auto;
-    max-height: 32rem;
+    height: calc(100% - 8.39rem);
 }
 
 .profile-photo {

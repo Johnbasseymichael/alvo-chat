@@ -4,6 +4,7 @@
     background: var(--dark-input-color);
     color: var(--text-color);
     position: relative;
+    height: 100vh;
 
 
     .profile-photo {
@@ -17,29 +18,35 @@
         }
     }
 
-    .logout-btn {
-        position: absolute;
-        bottom: .8rem;
-        left: .8rem;
-        border: none;
-        background: var(--input-color);
-        padding: .6rem 1rem;
-        border-radius: .4rem;
-        color: var(--text-color);
-        transition: .5s;
+    .btnbtn {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
 
-        span {
-            font-size: 1.2rem;
-            margin-top: .2rem;
-            margin-right: .2rem;
+        .logout-btn {
+            position: absolute;
+            bottom: .6rem;
+            border: none;
+            background: var(--input-color);
+            padding: .6rem 1rem;
+            border-radius: .4rem;
+            color: var(--text-color);
+            transition: .5s;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 87%;
+
+
+            span {
+                font-size: 1.2rem;
+                margin-top: .2rem;
+                margin-right: .2rem;
+            }
+
+            &:hover {
+                background: rgb(204, 7, 7);
+            }
+
         }
-
-        &:hover {
-            background: rgb(204, 7, 7);
-        }
-
     }
 }

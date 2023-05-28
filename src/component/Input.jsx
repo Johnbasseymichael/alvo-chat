@@ -83,11 +83,12 @@ const Input = () => {
         onChange={e => setText(e.target.value)}
         value={text} />
 
-      <input type="file" name="" id="img"
+      <input type="file" name="" id="file-inp" style={{display:'none'}}
         onChange={e => setImg(e.target.files[0])} />
+        {img && <p>Image selected</p>}
 
       <div className="input-action-btn">
-        <button><BsFillImageFill/></button>
+        <button><label htmlFor="file-inp"><BsFillImageFill/></label></button>
         <button onClick={handleSend}><BsFillSendFill/></button>
       </div>
     </div>

@@ -5,7 +5,8 @@
 .chats {
     // WORK ON THE HEIGHT LETTER
     overflow-y: auto;
-    max-height: 26.7rem;
+    height: calc(100% - 12rem);
+    border: 2px solid red;
 
     .chated {
         display: flex;

@@ -6,8 +6,6 @@ import Register from './pages/Register'
 import { useContext } from 'react'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { AuthContext } from './context/AuthContext'
-import SideBar from './component/SideBar'
-
 
 function App() {
   const { currentUser } = useContext(AuthContext)

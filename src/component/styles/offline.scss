@@ -1,0 +1,46 @@
+.offline {
+    height: 100vh;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    z-index: 10;
+
+
+    .offline-wrapper {
+        text-align: center;
+        max-width: 30rem;
+        margin: 1rem;
+        background: var(--dark-input-color);
+        padding: 2.5rem 1rem;
+        border-radius: .5rem;
+        position: relative;
+
+        .close-icon {
+            color: var(--text-color);
+            font-size: 2rem;
+            position: absolute;
+            top: .5rem;
+            right: .5rem;
+        }
+
+        p {
+            font-weight: bold;
+            font-size: large;
+            color: var(--text-color);
+            margin-bottom: 2rem;
+        }
+
+        .refresh-btn {
+            border: none;
+            font-size: 1rem;
+            padding: .5rem 1rem;
+            border-radius: .3rem;
+            background: var(--input-color);
+            color: var(--text-color);
+        }
+    }
+}

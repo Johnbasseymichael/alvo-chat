@@ -66,7 +66,8 @@ const Register = () => {
                             email,
                             password,
                             photoURL: downloadURL,
-                            uid: res.user.uid
+                            uid: res.user.uid,
+                            isOnline: false
                         })
 
                         await setDoc(doc(db, 'userChats', res.user.uid), {});
@@ -99,11 +100,11 @@ const Register = () => {
                     <input type="text" placeholder='Enter your email' />
                     <input type="password" placeholder='Create your password' />
                     <input onChange={(e) => setSelectedPic(e.target.files[0])} style={{ display: "none" }} type="file" id='profile-pic' />
-                    <label htmlFor="profile-pic">{selectedPic ? `${selectedPic.name}` : <AddPic/> }</label>
+                    <label htmlFor="profile-pic">{selectedPic ? `${selectedPic.name}` : <AddPic />}</label>
                     <button>Sign up</button>
                 </form>
 
-                <p>You do have an account? <Link to="/login">Login</Link></p>
+                <p>You do have an account? <Link to="/login"><span className='login-page-link'>Login</span></Link></p>
             </div>
         </div>
     )
@@ -113,11 +114,11 @@ export default Register;
 
 
 const AddPic = () => {
-  return (
-    <div style={{display:'flex',gap:'1rem', fontSize:'1.5rem'}}>
-      <BsFillImageFill/>
-      <span style={{fontSize:'1rem'}}>Add a photo</span>
-    </div>
-  )
+    return (
+        <div style={{ display: 'flex', gap: '1rem', fontSize: '1.5rem' }}>
+            <BsFillImageFill />
+            <span style={{ fontSize: '1rem' }}>Add a photo</span>
+        </div>
+    )
 }
 
