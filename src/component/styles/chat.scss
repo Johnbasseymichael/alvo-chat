@@ -20,6 +20,21 @@
         height: 3.79rem;
         border-bottom: .13rem solid var(--dark-input-color);
 
+        .back-icon {
+            display: none;
+            padding: .3rem;
+            border-radius: .2rem;
+            padding-top: .5rem;
+            &:active {
+                background: var(--dark-input-color);
+            }
+        }
+        
+        @media screen and (max-width: 700px) {
+            .back-icon {
+                display: inline-block;
+            }
+        }
         .chat-icons {
             cursor: pointer;
             display: flex;
@@ -40,6 +55,4 @@
         }
 
     }
-
-
 }

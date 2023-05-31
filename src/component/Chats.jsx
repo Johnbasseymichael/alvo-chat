@@ -2,14 +2,19 @@ import { doc, onSnapshot } from 'firebase/firestore'
 import React, { useContext, useEffect, useState } from 'react'
 import { AuthContext } from '../context/AuthContext'
 import { ChatsContext } from '../context/ChatsContext'
+import { OpenChatContext } from '../context/OpenChat'
 import { db } from '../firebase'
+import { WindowWidth } from '../pages/Home'
 import './styles/chats.scss'
 
 const Chats = () => {
   const [chats, setChats] = useState([])
 
+  const { windowWidth } = useContext(WindowWidth)
+  const { setIsMsgOpen } = useContext(OpenChatContext)
   const { currentUser } = useContext(AuthContext)
   const { dispatch } = useContext(ChatsContext)
+
 
 
   useEffect(() => {
@@ -28,8 +33,14 @@ const Chats = () => {
 
 
   const handleSelect = (u) => {
+    if (windowWidth <= 700) {
+      dispatch({ type: 'CHANGE_USER', payload: u })
+      setIsMsgOpen(true)
+    }
     dispatch({ type: 'CHANGE_USER', payload: u })
+
   }
+
 
   return (
     <div className='chats'>

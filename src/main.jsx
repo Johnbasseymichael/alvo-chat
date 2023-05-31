@@ -4,14 +4,17 @@ import App from './App.jsx'
 import './index.css'
 import { AuthContextProvider } from './context/AuthContext'
 import { ChatsContextProvider } from './context/ChatsContext'
+import { OpenChatContextProvider } from './context/OpenChat.jsx'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <AuthContextProvider>
-    <ChatsContextProvider>
-      <React.StrictMode>
-        <App />
-      </React.StrictMode>
-    </ChatsContextProvider>
-  </AuthContextProvider>
+  <OpenChatContextProvider>
+    <AuthContextProvider>
+      <ChatsContextProvider>
+        <React.StrictMode>
+          <App />
+        </React.StrictMode>
+      </ChatsContextProvider>
+    </AuthContextProvider>
+  </OpenChatContextProvider>
 )

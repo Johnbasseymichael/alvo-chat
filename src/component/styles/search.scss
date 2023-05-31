@@ -7,13 +7,19 @@
     max-height: 30rem;
 
     .search-icon {
+        padding: .2rem;
         font-size: 1.3rem;
         padding-top: .3rem;
+
+        &:hover,
+        :active {
+            background-color: var(--dark-input-color);
+        }
     }
 
     .search-form {
         display: grid;
-        grid-template-columns: 1.5rem auto;
+        grid-template-columns: auto 1.7rem;
         border-radius: 1rem;
         overflow: hidden;
         color: var(--text-color);
@@ -21,6 +27,7 @@
         background: var(--input-color);
         margin: 1rem auto;
         width: 90%;
+
 
         input {
             padding: .4rem;

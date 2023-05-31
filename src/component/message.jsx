@@ -20,7 +20,6 @@ const message = ({ message }) => {
         <div className="profile-photo">
           <img src={message.senderId === currentUser.uid ? currentUser.photoURL : data.user?.photoURL} />
         </div>
-        <span className="time">just now</span>
       </div>
 
       <div className="msg-content">

@@ -1,0 +1,27 @@
+ @import url('../../assets/globalStyles.scss');
+
+
+ .mobile-version {
+     display: flex;
+     align-items: center;
+     transition: .5s;
+     position: absolute;
+     overflow-y: hidden;
+
+     .mv-sidebar {
+         width: 100vw;
+         transition: .3s;
+
+     }
+
+     .open-it {
+         width: 0;
+
+     }
+
+     .mv-chat {
+         width: 100vw;
+         transition: .3s;
+
+     }
+ }

@@ -1,15 +1,25 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import SideBar from './SideBar'
 import Chat from './Chat'
+import './styles/mobileVersion.scss'
+import { OpenChatContext } from '../context/OpenChat'
+
+
 
 
 const mobileVersion = () => {
+  const { isMsgOpen } = useContext(OpenChatContext)
+
   return (
+
     <div className="mobile-version">
+      <div className={`mv-sidebar ${isMsgOpen && 'open-it'}`}>
+        <SideBar />
+      </div>
 
-      <SideBar />
-      <Chat />
-
+      <div className="mv-chat">
+        <Chat />
+      </div>
     </div>
   )
 }

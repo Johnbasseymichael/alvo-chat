@@ -1,14 +1,15 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import { Logo } from '../component/Logo'
 import { useNavigate, Link } from 'react-router-dom'
 import './styles/login.scss'
+import Loader from '../assets/Loader'
 
 
 import { auth } from '../firebase'
 import { signInWithEmailAndPassword } from 'firebase/auth'
 
 const Login = () => {
-
+  const [loading, setLoading] = useState(false)
   const [error, setError] = useState(false)
   const navigate = useNavigate()
 
@@ -19,15 +20,18 @@ const Login = () => {
     const password = e.target[1].value
 
     try {
+      setLoading(true)
       await signInWithEmailAndPassword(auth, email, password);
       navigate('/')
     } catch (err) {
       setError(true)
+      setLoading(false)
       console.error(err);
       console.log(err.name);
     }
 
   }
+
 
 
   return (
@@ -41,7 +45,7 @@ const Login = () => {
         <form onSubmit={handleSubmit}>
           <input type="text" placeholder='Enter your email' />
           <input type="password" placeholder='Enter your password' />
-          <button>Sign In</button>
+          {loading ? <Loader /> : <button>Sign In</button>}
         </form>
 
         <p>You don't have an account? <Link to="/register"><span className='register-page-link'>Register</span></Link> </p>

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Logo } from '../component/Logo'
 import './styles/register.scss'
 import { BsFillImageFill } from "react-icons/bs";
+import Loader from '../assets/Loader'
 
 
 import { auth, storage, db } from '../firebase'
@@ -19,6 +20,7 @@ import { useNavigate, Link } from 'react-router-dom'
 const Register = () => {
     const [selectedPic, setSelectedPic] = useState(null)
     const [error, setError] = useState(false)
+    const [loading, setLoading] = useState(false)
     const navigate = useNavigate()
 
 
@@ -39,6 +41,7 @@ const Register = () => {
 
             uploadTask.on('state_changed', (snapshot) => {
                 const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                progress < 100 ? setLoading(true) : setLoading(false);
                 console.log('Upload is ' + progress + '% done');
                 switch (snapshot.state) {
                     case 'paused':
@@ -101,7 +104,8 @@ const Register = () => {
                     <input type="password" placeholder='Create your password' />
                     <input onChange={(e) => setSelectedPic(e.target.files[0])} style={{ display: "none" }} type="file" id='profile-pic' />
                     <label htmlFor="profile-pic">{selectedPic ? `${selectedPic.name}` : <AddPic />}</label>
-                    <button>Sign up</button>
+                    {loading ? <Loader /> : <button>Sign up</button>}
+
                 </form>
 
                 <p>You do have an account? <Link to="/login"><span className='login-page-link'>Login</span></Link></p>
