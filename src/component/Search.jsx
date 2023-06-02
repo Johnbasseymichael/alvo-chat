@@ -82,7 +82,7 @@ const Search = () => {
 
     <div className="search">
       <div className="search-form">
-        <input type="text" placeholder='Find a user' onKeyDown={handleKey} onChange={e => setUserName(e.target.value)} value={userName} />
+        <input type="text" placeholder='Find a user: e.g alvo' onKeyDown={handleKey} onChange={e => setUserName(e.target.value)} value={userName} />
         <span onClick={handleSearch} className='search-icon'><HiOutlineSearch /></span>
       </div>
 
